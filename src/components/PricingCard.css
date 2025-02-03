@@ -1,0 +1,156 @@
+/* Контейнер карточек */
+.pricing-container {
+    display: flex; /* Flexbox для расположения карточек */
+    justify-content: center; /* Центрирование карточек по горизонтали */
+    gap: 30px; /* Отступ между карточками */
+    margin: 0 auto; /* Центрирование контейнера */
+    width: 1057px; /* Ширина блока */
+    height: 427px; /* Высота блока */
+    
+  }
+
+  /* Карточка */
+  .pricing-card {
+    width: 328px; /* Ширина карточки */
+    height: 427px; /* Высота карточки */
+    background-color: #f9faff; /* Цвет фона */
+    border-radius: 24px; /* Закруглённые углы */
+    padding: 32px; /* Внутренние отступы */
+    text-align: left; /* Текст внутри карточки выровнен по левому краю */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень карточки */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Скрывает содержимое за границами карточки */ /* Обрезка фигур за границами блока */
+    margin-top: 49px;
+    z-index: 1; /* Чтобы они находились под текстом */
+  }
+  
+  /* Карточка с выделением (блок 2) */
+  .pricing-card.featured {
+    width: 341px; /* Ширина выделенной карточки */
+    height: 338px; /* Высота выделенной карточки */
+    background-color: #000DFF; /* Синий фон */
+    color: #ffffff; /* Белый текст */
+    text-align: left; /* Текст выровнен по левому краю */
+    border-radius: 24px; /* Закруглённые углы */
+    box-shadow: 0 10px 20px rgba(32, 4, 175, 0.1); /* Тень карточки */
+    margin-top: 137px;
+  }
+  
+  .one-dollar {
+    margin-top: 5px;
+    margin-left: 200px;
+  }
+  /* Заголовок карточки */
+  .pricing-card h2 {
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 600; /* Полужирное начертание (Semi Bold) */
+    font-size: 22px; /* Размер текста */
+    line-height: 1.4; /* Межстрочный интервал: 140% */
+    letter-spacing: 0; /* Межбуквенный интервал: 0% */
+    margin-top: -45px;
+    margin-bottom: 8px; /* Отступ снизу */
+    text-align: left; /* Выравнивание по центру */
+  }
+  
+  .pricing-card p {
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 400; /* Regular начертание */
+    font-size: 20px; /* Размер текста */
+    line-height: 1.3; /* Межстрочный интервал: 130% */
+    letter-spacing: 0; /* Межбуквенный интервал: 0% */
+    text-align: left; /* Центрирование текста */
+    margin-bottom: 24px; /* Отступ снизу */
+    width: 193px; /* Ширина текста */
+    height: 26px; /* Высота текста */
+  }
+  
+  
+  /* Список внутри карточки */
+  .pricing-card ul {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin-bottom: 58px; /* Отступ снизу до кнопки */
+  }
+  
+  .pricing-card ul li {
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 400; /* Regular начертание */
+    font-size: 16px; /* Размер текста */
+    line-height: 1.3; /* Межстрочный интервал: 130% */
+    letter-spacing: 0; /* Межбуквенный интервал: 0% */
+    text-align: left; /* Выравнивание текста по левому краю */
+    color: #4b5563; /* Цвет текста */
+    position: relative; /* Для позиционирования иконки */
+    padding-left: 24px; /* Отступ для иконки */
+    margin-bottom: 12px; /* Расстояние между пунктами списка */
+  }
+
+  .pricing-card ul li::before {
+    content: ''; /* Контент через псевдоэлемент */
+    position: absolute;
+    left: 0; /* Расположение иконки */
+    top: 50%;
+    transform: translateY(-50%); /* Центрирование иконки по вертикали */
+    width: 18px; /* Ширина иконки */
+    height: 18px; /* Высота иконки */
+    background-image: url('SVG/icon.svg'); /* Путь к иконке */
+    background-size: cover; /* Масштабируем иконку */
+  }
+  
+.pricing-card.featured p {
+    color: #ffffff;
+}
+  /* Исключение для второго блока */
+.pricing-card.featured ul li {
+    color: #ffffff; /* Белый текст */
+}
+
+.pricing-card.featured ul li::before {
+    background-image: url('SVG/icon2.svg'); /* Путь к иконке для второго блока */
+}
+
+.pricing-card.featured .btn {
+    color: #ffffff; /* Цвет текста наследуется */
+    margin-top: 10px;
+    z-index: 0; /* Чтобы они находились под текстом */
+}
+
+.pricing-card.featured .btn:hover {
+  background-color: #587bfa; /* Фон при наведении */
+}
+  
+  /* Кнопка */
+  .btn {
+    background-color: transparent; /* Прозрачный фон */
+    color: #000DFF; /* Цвет текста наследуется */
+    border: 2px solid currentColor; /* Граница совпадает с цветом текста */
+    border-radius: 8px; /* Закруглённые углы */
+    padding: 13px 32px; /* Внутренние отступы кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    width: 264px; /* Ширина кнопки */
+    height: 47px; /* Высота кнопки */
+    text-align: center; /* Центрирование текста */
+    cursor: pointer; /* Указатель при наведении */
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 700; /* Bold начертание */
+    font-size: 16px; /* Размер текста */
+    line-height: 1.3; /* Межстрочный интервал: 130% */
+    letter-spacing: 0; /* Межбуквенный интервал: 0% */
+    margin-top: 15px;
+  }
+  
+  .btn:hover {
+    background-color: #dbe1f8; /* Фон при наведении */
+    color: #000DFF; /* Синий текст при наведении */
+  }
+
+  .pricing-card.featured .featured-figures {
+    display: block; /* Устанавливаем изображение блочным */
+    margin-left: -31.5px;
+    margin-top: -140px;
+    height: auto; /* Сохраняем пропорции изображения */
+    width: 90%; /* Уменьшаем ширину до 80% от ширины карточки */
+  }
+
+  

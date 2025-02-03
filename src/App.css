@@ -1,0 +1,17 @@
+body {
+  margin: auto;
+  display: grid;
+  place-items: center; /* Центрирует по горизонтали и вертикали */
+  min-height: 100vh;
+  background-color: #e5e5e5;
+}
+
+.App {
+  position: relative;
+  width: max-content;
+  height: 1800px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
